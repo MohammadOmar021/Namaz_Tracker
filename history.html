@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaz Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IE+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="grid grid-cols-12 h-screen bg-gradient-to-r from-indigo-200 via-black-500 to-pink-200"
+    >
+      <div class="block col-span-12 h-12 p-2">
+        <div class="flex justify-center items-center my-2">
+          <span>22 july 2025</span>
+        </div>
+        <div class="flex justify-evenly h-full">
+          <div class="flex justify-center items-center p-2 shadow-sm">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <div class="flex justify-center items-center p-2 shadow-sm">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="flex justify-center items-center p-2 shadow-sm">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div class="flex justify-center items-center p-2 shadow-sm">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </div>
+        </div>
+      </div>
+      <div class="hidden col-span-4 md:col-span-2 row-span-5 flex flex-col">
+        <div
+          class="mt-6 mb-2 h-12 w-full shadow-md shadow-blue-400 rounded-xl flex justify-center items-center"
+        >
+          <span id="todayDate">22 July 2025</span>
+        </div>
+        <button
+          class="my-2 mb-2 h-12 w-full shadow-md shadow-blue-400 rounded-xl"
+        >
+          Dashboard
+        </button>
+        <button class="my-2 w-full h-12 shadow-md rounded-xl shadow-blue-400">
+          Profile
+        </button>
+        <button class="my-2 w-full h-12 shadow-md shadow-blue-400 rounded-xl">
+          History
+        </button>
+        <button
+          class="shadow-blue-400 rounded-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-red-500 my-2 w-full h-12 shadow-md"
+        >
+          LogOut
+        </button>
+      </div>
+      <div
+        class="col-span-12 row-span-5 flex justify-center items-center h-full w-full"
+      >
+        <div
+          class="md:h-120 h-full grid gap-1 mx-2 history-card rounded-xl w-full"
+        >
+          <div class="shadow-lg">
+            <div class="flex flex-col mx-2 h-full">
+              <div class="flex flex-col justify-center items-center mb-2">
+                <span>Monday</span>
+                <span id="history-date">22 july 2025</span>
+              </div>
+              <div class="h-full w-full grid grid-cols-7 ">
+                <div class="grid grid-cols-3  h-full shadow-lg">
+                  <div class="col-span-2  h-full flex flex-col ">
+                    <div class="flex justify-center items-center flex-col">
+                      <span>Monday</span>
+                      <span>20 July 2025</span>
+                    </div>
+                    <div class="flex flex-col  h-60 justify-evenly ml-2">
+                        <span>Fajr</span>
+                        <span>Duhr</span>
+                        <span>Asr</span>
+                        <span>Maghrib</span>
+                        <span>Isha</span>
+                    </div>
+                  </div>
+                  <div class="col-span-1  h-full flex flex-col ">
+                        <div class="mt-10">
+                            <div>
+                            <div class="flex justify-center mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3  h-full shadow-lg">
+                  <div class="col-span-2  h-full flex flex-col ">
+                    <div class="flex justify-center items-center flex-col">
+                      <span>Monday</span>
+                      <span>20 July 2025</span>
+                    </div>
+                    <div class="flex flex-col  h-60 justify-evenly ml-2">
+                        <span>Fajr</span>
+                        <span>Duhr</span>
+                        <span>Asr</span>
+                        <span>Maghrib</span>
+                        <span>Isha</span>
+                    </div>
+                  </div>
+                  <div class="col-span-1  h-full flex flex-col ">
+                        <div class="mt-10">
+                            <div>
+                            <div class="flex justify-center mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3  h-full shadow-lg">
+                  <div class="col-span-2  h-full flex flex-col ">
+                    <div class="flex justify-center items-center flex-col">
+                      <span>Monday</span>
+                      <span>20 July 2025</span>
+                    </div>
+                    <div class="flex flex-col  h-60 justify-evenly ml-2">
+                        <span>Fajr</span>
+                        <span>Duhr</span>
+                        <span>Asr</span>
+                        <span>Maghrib</span>
+                        <span>Isha</span>
+                    </div>
+                  </div>
+                  <div class="col-span-1  h-full flex flex-col ">
+                        <div class="mt-10">
+                            <div>
+                            <div class="flex justify-center mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3  h-full shadow-lg">
+                  <div class="col-span-2  h-full flex flex-col ">
+                    <div class="flex justify-center items-center flex-col">
+                      <span>Monday</span>
+                      <span>20 July 2025</span>
+                    </div>
+                    <div class="flex flex-col  h-60 justify-evenly ml-2">
+                        <span>Fajr</span>
+                        <span>Duhr</span>
+                        <span>Asr</span>
+                        <span>Maghrib</span>
+                        <span>Isha</span>
+                    </div>
+                  </div>
+                  <div class="col-span-1  h-full flex flex-col ">
+                        <div class="mt-10">
+                            <div>
+                            <div class="flex justify-center mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3  h-full shadow-lg">
+                  <div class="col-span-2  h-full flex flex-col ">
+                    <div class="flex justify-center items-center flex-col">
+                      <span>Monday</span>
+                      <span>20 July 2025</span>
+                    </div>
+                    <div class="flex flex-col  h-60 justify-evenly ml-2">
+                        <span>Fajr</span>
+                        <span>Duhr</span>
+                        <span>Asr</span>
+                        <span>Maghrib</span>
+                        <span>Isha</span>
+                    </div>
+                  </div>
+                  <div class="col-span-1  h-full flex flex-col ">
+                        <div class="mt-10">
+                            <div>
+                            <div class="flex justify-center mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3  h-full shadow-lg">
+                  <div class="col-span-2  h-full flex flex-col ">
+                    <div class="flex justify-center items-center flex-col">
+                      <span>Monday</span>
+                      <span>20 July 2025</span>
+                    </div>
+                    <div class="flex flex-col  h-60 justify-evenly ml-2">
+                        <span>Fajr</span>
+                        <span>Duhr</span>
+                        <span>Asr</span>
+                        <span>Maghrib</span>
+                        <span>Isha</span>
+                    </div>
+                  </div>
+                  <div class="col-span-1  h-full flex flex-col">
+                        <div class="mt-10">
+                            <div>
+                            <div class="flex justify-center mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3  h-full shadow-lg">
+                  <div class="col-span-2  h-full flex flex-col ">
+                    <div class="flex justify-center items-center flex-col">
+                      <span>Monday</span>
+                      <span>20 July 2025</span>
+                    </div>
+                    <div class="flex flex-col  h-60 justify-evenly ml-2">
+                        <span>Fajr</span>
+                        <span>Duhr</span>
+                        <span>Asr</span>
+                        <span>Maghrib</span>
+                        <span>Isha</span>
+                    </div>
+                  </div>
+                  <div class="col-span-1  h-full flex flex-col ">
+                        <div class="mt-10">
+                            <div>
+                            <div class="flex justify-center mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        <div>
+                            <div class="flex justify-center  mt-4 p-1 h-8 items-center"> <input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"><input type="radio" name="" id="" class="mx-1"></div>
+                           
+                        </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

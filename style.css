@@ -36,3 +36,21 @@ input{
     width: 100%;
     /* margin: 10px; */
 }
+
+.namaz-card{
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.history-card{
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.profile-card{
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.label-radio{
+    font-size: 12px;
+}
+
+.radio-card input{
+    transform: scale(0.5);
+}
