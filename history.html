@@ -26,18 +26,22 @@
     >
       <div class="block col-span-12 h-12 p-2">
         <div class="flex justify-center items-center my-2">
-          <span>22 july 2025</span>
+          <span id="todayDate5"></span>
         </div>
         <div class="flex justify-evenly h-full">
-          <div class="flex justify-center items-center p-2 shadow-sm">
+          <a href="dashboard.html"><div class="flex justify-center items-center p-2 shadow-sm">
             <i class="fa-solid fa-house"></i>
-          </div>
-          <div class="flex justify-center items-center p-2 shadow-sm">
+          </div></a>
+          <a href="profile.html">
+            <div class="flex justify-center items-center p-2 shadow-sm">
             <i class="fa-solid fa-user"></i>
           </div>
-          <div class="flex justify-center items-center p-2 shadow-sm">
+          </a>
+          <a href="history.html">
+            <div class="flex justify-center items-center p-2 shadow-sm">
             <i class="fa-solid fa-clock-rotate-left"></i>
           </div>
+          </a>
           <div class="flex justify-center items-center p-2 shadow-sm">
             <i class="fa-solid fa-right-from-bracket"></i>
           </div>
@@ -76,281 +80,22 @@
             <div class="flex flex-col mx-2 h-full mb-2">
               <div class="flex flex-col justify-center items-center mb-2">
                 <span>Monday</span>
-                <span id="history-date">22 july 2025</span>
+                <span id="todayDate6">22 july 2025</span>
               </div>
-              <div class="h-full w-full grid grid-cols-7 gap-1  ">
-                <div class="col-span-7 lg:col-span-1 shadow-xl flex grid grid-cols-3">
-                  <div class="col-span-2  flex flex-col justify-evenly items-center">
-                    <span class="ml-2">23 July 2025</span>
-                    <span class="ml-2">Fajr</span>
-                    <span class="ml-2">Duhr</span>
-                    <span class="ml-2">Asr</span>
-                    <span class="ml-2">Maghrib</span>
-                    <span class="ml-2">Isha</span>
-                  </div>
-                  <div class="col-span-1  flex flex-col justify-evenly">
-                     <div class="flex  md:mt-20 mt-10">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                  </div>
-                     
-              </div>
+              <div class="h-full w-full grid grid-cols-7 gap-1"  id="historyDiv">
+             
+             
               
-                <div class="col-span-7 lg:col-span-1 shadow-xl flex grid grid-cols-3">
-                  <div class="col-span-2  flex flex-col justify-evenly items-center">
-                    <span class="ml-2">23 July 2025</span>
-                    <span class="ml-2">Fajr</span>
-                    <span class="ml-2">Duhr</span>
-                    <span class="ml-2">Asr</span>
-                    <span class="ml-2">Maghrib</span>
-                    <span class="ml-2">Isha</span>
-                  </div>
-                  <div class="col-span-1  flex flex-col justify-evenly">
-                     <div class="flex  md:mt-20 mt-10">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                  </div>
-                     
-              </div>
+               
+             
               
-                <div class="col-span-7 lg:col-span-1 shadow-xl flex grid grid-cols-3">
-                  <div class="col-span-2  flex flex-col justify-evenly items-center">
-                    <span class="ml-2">23 July 2025</span>
-                    <span class="ml-2">Fajr</span>
-                    <span class="ml-2">Duhr</span>
-                    <span class="ml-2">Asr</span>
-                    <span class="ml-2">Maghrib</span>
-                    <span class="ml-2">Isha</span>
-                  </div>
-                  <div class="col-span-1  flex flex-col justify-evenly">
-                     <div class="flex  md:mt-20 mt-10">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                  </div>
-                     
-              </div>
+               
               
-                <div class="col-span-7 lg:col-span-1 shadow-xl flex grid grid-cols-3">
-                  <div class="col-span-2  flex flex-col justify-evenly items-center">
-                    <span class="ml-2">23 July 2025</span>
-                    <span class="ml-2">Fajr</span>
-                    <span class="ml-2">Duhr</span>
-                    <span class="ml-2">Asr</span>
-                    <span class="ml-2">Maghrib</span>
-                    <span class="ml-2">Isha</span>
-                  </div>
-                  <div class="col-span-1  flex flex-col justify-evenly">
-                     <div class="flex  md:mt-20 mt-10">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                  </div>
-                     
-              </div>
+             
               
-                <div class="col-span-7 lg:col-span-1 shadow-xl flex grid grid-cols-3">
-                  <div class="col-span-2  flex flex-col justify-evenly items-center">
-                    <span class="ml-2">23 July 2025</span>
-                    <span class="ml-2">Fajr</span>
-                    <span class="ml-2">Duhr</span>
-                    <span class="ml-2">Asr</span>
-                    <span class="ml-2">Maghrib</span>
-                    <span class="ml-2">Isha</span>
-                  </div>
-                  <div class="col-span-1  flex flex-col justify-evenly">
-                     <div class="flex  md:mt-20 mt-10">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                  </div>
-                     
-              </div>
+                
               
-                <div class="col-span-7 lg:col-span-1 shadow-xl flex grid grid-cols-3">
-                  <div class="col-span-2  flex flex-col justify-evenly items-center">
-                    <span class="ml-2">23 July 2025</span>
-                    <span class="ml-2">Fajr</span>
-                    <span class="ml-2">Duhr</span>
-                    <span class="ml-2">Asr</span>
-                    <span class="ml-2">Maghrib</span>
-                    <span class="ml-2">Isha</span>
-                  </div>
-                  <div class="col-span-1  flex flex-col justify-evenly">
-                     <div class="flex  md:mt-20 mt-10">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                  </div>
-                     
-              </div>
-              
-                <div class="col-span-7 lg:col-span-1 shadow-xl flex grid grid-cols-3">
-                  <div class="col-span-2  flex flex-col justify-evenly items-center">
-                    <span class="ml-2">23 July 2025</span>
-                    <span class="ml-2">Fajr</span>
-                    <span class="ml-2">Duhr</span>
-                    <span class="ml-2">Asr</span>
-                    <span class="ml-2">Maghrib</span>
-                    <span class="ml-2">Isha</span>
-                  </div>
-                  <div class="col-span-1  flex flex-col justify-evenly">
-                     <div class="flex  md:mt-20 mt-10">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                     <div class="flex ">
-                      <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     <input type="checkbox" name="" id="" class="mx-1">
-                     </div>
-                  </div>
-                     
-              </div>
+                
               
                 
             </div>
@@ -358,5 +103,6 @@
         </div>
       </div>
     </div>
+    <script type="module" src="history.js"></script>
   </body>
 </html>

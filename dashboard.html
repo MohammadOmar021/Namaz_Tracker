@@ -12,39 +12,50 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="grid grid-cols-12 grid-rows-5 h-screen bg-gradient-to-r from-indigo-200 via-black-500 to-pink-200">
       <div class="md:hidden block col-span-12  h-12 p-2">
         <div class="flex justify-center items-center my-2">
-          <span>22 july 2025</span>
+          <span id="todayDate"></span>
         </div>
        <div class="flex justify-evenly  h-full">
         
-        <div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-house"></i></div>
-        <div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-user"></i></div>
-        <div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-clock-rotate-left"></i></div>
-        <div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-right-from-bracket"></i></div>
+        <a href="dashboard.html"><div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-house"></i></div>
+       </a>
+       <a href="profile.html"><div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-user"></i></div>
+       </a>  
+       <a href="history.html"><div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-clock-rotate-left"></i></div>
+      </a>
+       <div class="flex justify-center items-center p-2 shadow-sm"><i class="fa-solid fa-right-from-bracket"></i></div>
        </div>
       </div>
       <div
         class="hidden md:block col-span-4 md:col-span-2 row-span-5 flex flex-col "
       >
       <div class="mt-6 mb-2 h-12 w-full shadow-md shadow-blue-400 rounded-xl flex justify-center items-center">
-        <span id="todayDate">22 July 2025</span>
+        <span id="todayDate2"></span>
       </div>
-        <button
+        <a href="dashboard.html">
+          <button
           class="my-2 mb-2 h-12 w-full shadow-md shadow-blue-400 rounded-xl"
         >
           Dashboard
         </button>
-        <button class="my-2 w-full h-12 shadow-md rounded-xl shadow-blue-400">
+        </a>
+     <a href="profile.html">
+         <button class="my-2 w-full h-12 shadow-md rounded-xl shadow-blue-400">
           Profile
         </button>
-        <button class="my-2 w-full h-12 shadow-md shadow-blue-400 rounded-xl">
+     </a>
+       <a href="history.html">
+         <button class="my-2 w-full h-12 shadow-md shadow-blue-400 rounded-xl">
           History
         </button>
+       </a>
         <button
           class="shadow-blue-400 rounded-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-red-500 my-2 w-full h-12 shadow-md"
         >
@@ -54,7 +65,7 @@
       <div
         class="col-span-12 md:col-span-10  row-span-5 flex justify-center items-center h-full w-full "
       >
-        <div class=" h-96  w-3xl grid grid-cols-4 gap-1 mx-2 namaz-card rounded-xl">
+        <div class=" h-96  w-3xl grid grid-cols-4 gap-1 mx-2 namaz-card rounded-xl ">
           
           <div class="col-span-2  flex flex-col justify-center ">
             <span class="text-xl md:text-3xl mx-2 py-2  px-2">Daily Fard Namaz</span>
@@ -68,48 +79,56 @@
             <div class=" h-64 w-full mt-24 md:mt-12 mx-1 radio-card ">
                 <div class="flex mt-6 md:mt-6 justify-center items-center px-2 shadow-sm">
                   <label for="" class="label-radio hidden md:block">Completed</label>
-                  <input type="radio" >
+                  <input type="radio"  name="namazStatus-fajr" id="Completed" value="Completed">
                   <label for="" class="label-radio hidden md:block">Missed</label>
-                  <input type="radio" checked>
+                  <input type="radio" checked name="namazStatus-fajr" id="Missed" value="Missed">
                   <label for="" class="label-radio hidden md:block">Qaza</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-fajr" id="Qaza" value="Qaza">
                 </div>
                 <div class="flex md:mt-1 justify-center items-center px-2 shadow-sm">
                   <label for="" class="label-radio hidden md:block">Completed</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-duhr" id="completed" value="Completed" >
                   <label for="" class="label-radio hidden md:block ">Missed</label>
-                  <input type="radio" checked>
+                  <input type="radio" checked name="namazStatus-duhr" id="Missed" value="Missed" >
                   <label for="" class="label-radio hidden md:block">Qaza</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-duhr" id="Qaza" value="Qaza" >
                 </div>
                 <div class="flex md:mt-1 justify-center items-center px-2 shadow-sm">
                   <label for="" class="label-radio hidden md:block">Completed</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-asr" id="completed" value="Completed">
                   <label for="" class="label-radio hidden md:block ">Missed</label>
-                  <input type="radio" checked>
+                  <input type="radio" checked name="namazStatus-asr" id="Missed" value="Missed">
                   <label for="" class="label-radio hidden md:block">Qaza</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-asr" id="Qaza" value="Qaza">
                 </div>
                 <div class="flex md:mt-1 justify-center items-center px-2 shadow-sm">
                   <label for="" class="label-radio hidden md:block">Completed</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-maghrib" id="completed" value="Completed">
                   <label for="" class="label-radio  hidden md:block">Missed</label>
-                  <input type="radio" checked>
+                  <input type="radio" checked name="namazStatus-maghrib" id="Missed" value="Missed">
                   <label for="" class="label-radio hidden md:block">Qaza</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-maghrib" id="Qaza" value="Qaza">
                 </div>
                 <div class="flex md:mt-1 justify-center items-center px-2 shadow-sm">
                   <label for="" class="label-radio hidden md:block">Completed</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-isha" id="completed" value="Completed">
                   <label for="" class="label-radio  hidden md:block">Missed</label>
-                  <input type="radio" checked>
+                  <input type="radio" checked name="namazStatus-isha" id="Missed" value="Missed">
                   <label for="" class="label-radio hidden md:block">Qaza</label>
-                  <input type="radio">
+                  <input type="radio" name="namazStatus-isha" id="Qaza" value="Qaza">
                 </div>
+              <div class=" flex justify-center items-center p-2">
+                <button class="border-1 mr-2 my-2 rounded-2xl shadow-lg w-36  bg-green-500 shadow-md shadow-green-200 rounded-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-100 hover:bg-green-700 " id="addNamaz">Add</button>
+              </div>
             </div>
+            
           </div>
+
         </div>
+        
       </div>
+                
     </div>
+    <script type="module" src="dashboard.js"></script>
   </body>
 </html>
