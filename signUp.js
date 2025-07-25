@@ -30,6 +30,7 @@ signUp.addEventListener("click", async (e) => {
       email: email,
       phoneNumber: phoneNumber,
       uid: userUid,
+      profilePic:""
     };
     const docRef = await addDoc(collection(db, "users"), userData);
     localStorage.setItem('docref', docRef.id)

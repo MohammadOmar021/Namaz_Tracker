@@ -1,4 +1,4 @@
-import {app, db, collection, addDoc, updateDoc, doc, setDoc  } from "./firebase.js";
+import {app, db, collection, addDoc, updateDoc, doc, setDoc,getAuth, onAuthStateChanged, auth, signOut  } from "./firebase.js";
 // import userUid from "./signUp.js";
 
 console.log(localStorage.getItem('userId'))
@@ -9,10 +9,20 @@ console.log(todayDatec)
 console.log(userId+todayDatec)
 localStorage.setItem('userExist', userId+todayDatec)
 
-if(localStorage.getItem('userExist')){
-  addNamaz.style.display="none";
 
-}else{
+const userExist = ()=>{
+  onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    // const uid = user.uid;
+     window.location.replace("index.html")
+  } 
+});
+}
+
+window.onload=userExist();
+
   addNamaz.addEventListener('click', async ()=>{
 
     const selectedStatus1 = document.querySelector('input[name="namazStatus-fajr"]:checked').value
@@ -30,10 +40,12 @@ console.log(selectedStatus5)
 
 const todayDatec = new Date().toLocaleDateString().split("/").join("")
 console.log(todayDatec)
-
+const date = new Date().toLocaleDateString()
+console.log("Date ye hai",date)
 const userId = localStorage.getItem('userId')
-await setDoc(doc(db, "NamazRecord", userId+todayDatec), {
-  userId: userId+todayDatec,
+await setDoc(doc(db, "NamazRecord", todayDatec), {
+  date: date, 
+  userId: userId,
   fajr: selectedStatus1,
   Duhr: selectedStatus2,
   Asr: selectedStatus3,
@@ -52,10 +64,20 @@ await setDoc(doc(db, "NamazRecord", userId+todayDatec), {
 
 })
 
-}
 
 const todayDate = document.getElementById("todayDate")
 const todayDate2 = document.getElementById("todayDate2")
 
-todayDate.innerHTML = new Date().toLocaleString()
+todayDate.innerHTML = new Date().toLocaleDateString()
 todayDate2.innerHTML = new Date().toLocaleString()
+
+const signOutBtn= document.getElementById("signOutBtn")
+
+signOutBtn.addEventListener('click', ()=>{
+  
+signOut(auth).then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+});
+})
