@@ -1,13 +1,25 @@
-import { db, doc, getDoc, updateDoc } from "./firebase.js";
+import { db, doc, getDoc, updateDoc, auth, onAuthStateChanged } from "./firebase.js";
 
-const getData = async()=>{
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    const uid = user.uid;
+    getData(uid)
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+//console.log(uid)
+const getData = async(uid)=>{
    
    const name = document.getElementById("name"); 
 const email = document.getElementById("email"); 
 const phone = document.getElementById("phone");
 const pImage = document.getElementById("pImage") 
-   const refId = localStorage.getItem('docref')
-const docRef = doc(db, "users", refId);
+  //  const refId = localStorage.getItem('docref')
+const docRef = doc(db, "users", uid);
 const docSnap = await getDoc(docRef);
 const data = docSnap.data();
 
@@ -21,7 +33,7 @@ pImage.src=data.profilePic
 }
 
 
-getData()
+
 const todayDate3 = document.getElementById("todayDate3")
 todayDate3.innerHTML = new Date().toLocaleString()
 const todayDate4 = document.getElementById("todayDate4")
@@ -33,7 +45,7 @@ todayDate4.innerHTML = new Date().toLocaleString()
 const uploadInput = document.getElementById("uploadPhoto");
 const updateChanges = document.getElementById("updateChanges");
 const pImage = document.getElementById("pImage");
-const docId = localStorage.getItem('docref');
+//const docId = localStorage.getItem('docref');
 
 updateChanges.addEventListener('click', async () => {
   const file = uploadInput.files[0];
@@ -67,7 +79,8 @@ updateChanges.addEventListener('click', async () => {
     pImage.src = imageURL;
 
     // Save to Firestore
-    const washingtonRef = doc(db, "users", docId);
+    const uid = localStorage.getItem('userId')
+    const washingtonRef = doc(db, "users", uid);
     await updateDoc(washingtonRef, {
       profilePic: imageURL,
     });

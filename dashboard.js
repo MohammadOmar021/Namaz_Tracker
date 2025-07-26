@@ -1,4 +1,4 @@
-import {app, db, collection, addDoc, updateDoc, doc, setDoc,getAuth, onAuthStateChanged, auth, signOut  } from "./firebase.js";
+import {app, db, collection, addDoc, updateDoc, doc, setDoc,getAuth, onAuthStateChanged, auth, signOut, Timestamp, serverTimestamp } from "./firebase.js";
 // import userUid from "./signUp.js";
 
 console.log(localStorage.getItem('userId'))
@@ -42,9 +42,10 @@ const todayDatec = new Date().toLocaleDateString().split("/").join("")
 console.log(todayDatec)
 const date = new Date().toLocaleDateString()
 console.log("Date ye hai",date)
+const createdTime = new Date().getTime()
 const userId = localStorage.getItem('userId')
 await setDoc(doc(db, "NamazRecord", todayDatec), {
-  date: date, 
+  timeCreated: createdTime, 
   userId: userId,
   fajr: selectedStatus1,
   Duhr: selectedStatus2,
