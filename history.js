@@ -97,6 +97,7 @@ fajrMissed.checked=true
     const fajrQaza = document.getElementById(`fajrQaza-${docId}`)
 fajrQaza.checked=true
 }
+//const fajrQaza = document.getElementById(`fajrQaza-${docId}`)
 
    
     if(doc.data().Duhr=="Completed"){
@@ -146,8 +147,8 @@ ishaQaza.checked=true
 
 
 }
-
-getNamazData();
+getNamazData()
+setTimeout(getNamazData, 0)
 });
 
 
