@@ -77,7 +77,9 @@ const signOutBtn= document.getElementById("signOutBtn")
 signOutBtn.addEventListener('click', ()=>{
   
 signOut(auth).then(() => {
-  // Sign-out successful.
+  // Sign-out successful.'
+  localStorage.removeItem('userExist')
+  localStorage.removeItem('userId')
 }).catch((error) => {
   // An error happened.
 });

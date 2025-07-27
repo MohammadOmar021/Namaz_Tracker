@@ -1,5 +1,5 @@
 import { db, doc, getDoc, updateDoc, auth, onAuthStateChanged } from "./firebase.js";
-
+import {onloading} from './history.js'
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties

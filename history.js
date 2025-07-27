@@ -1,4 +1,4 @@
-import {doc, getDoc, db, getDocs, collection, query, where, Timestamp } from "./firebase.js"
+import {doc, getDoc, db, getDocs, collection, query, where, Timestamp, signOut, auth } from "./firebase.js"
 
 
 const todayDate5 = document.getElementById("todayDate5")
@@ -24,6 +24,14 @@ console.log(new Date(todayTime).getDate())
 console.log(new Date(yesterdayTime).getDate())
 
 //console.log(new Date().getDate(Timestamp.fromDate(new Date())));
+
+const onloading =()=>{
+    const user = localStorage.getItem('userId')
+    if(!user){
+        location.replace('index.html')
+    }
+}
+window.onload=onloading
 
 const q = query(
   collection(db, "NamazRecord"),
@@ -154,8 +162,21 @@ setTimeout(getNamazData, 0)
 
 
 
+const signOutBtn = document.getElementById("signOutBtn").addEventListener('click', ()=>{
+    signOut(auth).then(() => {
+  
+localStorage.removeItem('userExist')
+  localStorage.removeItem('userId')     // Sign-out successful.
+  location.replace("index.html")
 
+}).catch((error) => {
+  // An error happened.
+});
+})
  
 
 // const arr = [];
 
+export{
+    onloading
+}
